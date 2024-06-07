@@ -39,13 +39,10 @@ def remove_item(inventory, item):
 
 
 def list_inventory(inventory):
-   new_inventory = dict()
-   for key, value in inventory.items():
+   list = []
+   for key, value in inventory.items()
         if value > 0:
-           new_inventory[key] = value
-        else:
-            new_inventory = new_inventory
-    return list(new_inventory.items())
-
+            list.append((key,value))
+    return list
 
 
