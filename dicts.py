@@ -40,7 +40,7 @@ def remove_item(inventory, item):
 
 def list_inventory(inventory):
    list = []
-   for key, value in inventory.items()
+   for key, value in inventory.items():
         if value > 0:
             list.append((key,value))
     return list
