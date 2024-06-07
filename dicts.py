@@ -39,13 +39,13 @@ def remove_item(inventory, item):
 
 
 def list_inventory(inventory):
-    """Create a list containing all (item_name, item_count) pairs in inventory.
-
-    :param inventory: dict - an inventory dictionary.
-    :return: list of tuples - list of key, value pairs from the inventory dictionary.
-    """
-    return {}
-
+   new_inventory = dict()
+   for key, value in inventory.items():
+        if value > 0:
+           new_inventory[key] = value
+        else:
+            new_inventory = new_inventory
+    return list(new_inventory.items())
 
 
 
